@@ -1,0 +1,10 @@
+body {
+  @include font-size($base-font-size);
+  font-family: 'Open Sans', sans-serif;
+  line-height: $line-height-general;
+  color: $grey-dark-1;
+}
+
+input, button, textarea {
+  font-family: 'Open Sans', sans-serif;
+}

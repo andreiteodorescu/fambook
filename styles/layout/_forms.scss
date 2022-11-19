@@ -1,0 +1,93 @@
+.form-control {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    @include font-size(14);
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  &-field {
+    display: block;
+    width: 100%;
+    border: 0.1rem solid $grey-medium-2;
+    background: $grey-light;
+    padding: 0.8rem;
+    @include font-size(16);
+  }
+
+  &-upload {
+    cursor: pointer;
+    display: inline-block !important;
+
+    input[type=file] {
+      display: none;
+    }
+  }
+
+  &-dropdown {
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
+  }
+}
+
+textarea.form-control-field {
+  resize: vertical;
+}
+
+.react-datepicker {
+  width: 340px;
+  font-size: inherit !important;
+
+  &__header {
+    background-color: $brand-first !important;
+  }
+
+  &__month-container {
+    float: none !important;
+  }
+
+  &__day-name {
+    color: #fff !important;
+    width: 4rem !important;
+  }
+
+  &__day {
+    width: 4rem !important;
+    line-height: normal !important;
+
+    &--selected {
+      background-color: $brand-second;
+    }
+  }
+}
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+  border-bottom-color: $brand-first !important;
+}
+
+.datepicker-month-flex {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    width: 2rem;
+    background: #fff;
+    border: none;
+    height: 2.7rem;
+    position: relative;
+    top: 0.1rem;
+    cursor: pointer;
+  }
+
+  select {
+    flex: 1;
+    padding: 0.5rem;
+  }
+}
+
+.form-button-wrapper {
+  max-width: 32rem
+}

@@ -1,0 +1,23 @@
+.main {
+  //overflow-x: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 120rem;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.content {
+  padding: 5rem 0 0;
+}
+
+.brand-half-first {
+  color: $brand-first;
+}
+
+.brand-half-second {
+  color: $brand-second;
+}

@@ -1,0 +1,61 @@
+@use 'styles/abstracts/mixins' as *;
+@use 'styles/base/animations' as *;
+@use 'styles/abstracts/variables' as *;
+
+
+.screen {
+  justify-content: space-between;
+  height: calc(100vh - 5rem);
+
+  &-title {
+    @include font-size(36);
+  }
+
+  &-subtitle {
+    @include font-size(28);
+  }
+
+  &-right {
+    animation: moveInRight .5s ease-out;
+    position: relative;
+    padding: 0.1rem;
+
+    &:before {
+      content: "";
+      border-left: 0.1rem solid $grey-medium-2;
+      border-right: 0.1rem solid $grey-medium-2;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      animation: heightGrow .7s ease-out .4s forwards;
+    }
+
+    &:after {
+      content: "";
+      border-top: 0.1rem solid $grey-medium-2;
+      border-bottom: 0.1rem solid $grey-medium-2;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      animation: widthGrow .7s ease-out .4s forwards;
+    }
+
+    &-content {
+      padding: 2rem;
+      width: 40rem;
+      position: relative;
+      top: 0.1rem;
+      left: 0.1rem;
+      z-index: 1;
+    }
+
+    h4 {
+      text-align: center;
+      @include font-size(28);
+      margin-bottom: 2rem;
+    }
+  }
+}
+

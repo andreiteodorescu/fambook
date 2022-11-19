@@ -1,0 +1,62 @@
+.btn {
+  @include font-size(14);
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: .3s ease all;
+}
+
+.btn-primary {
+  padding: 1.2rem 3rem;
+  position: relative;
+  background: $link-btn;
+  outline: none;
+  z-index: 2;
+  color:#fff;
+  font-weight: 700;
+  width: 100%;
+
+  &::before {
+    transition: .5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: $link-btn-hover;
+    z-index: -2;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      transition: .5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: scale(.98);
+  }
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: $link-btn;
+
+  &:hover {
+    color: $link-btn-hover;
+  }
+}
+
+.btn-font-large {
+  @include font-size(18);
+}

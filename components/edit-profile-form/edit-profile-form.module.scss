@@ -1,0 +1,13 @@
+@use 'styles/abstracts/mixins' as *;
+@use 'styles/abstracts/variables' as *;
+
+.f-row {
+  label {
+    @include font-size(18);
+  }
+}
+
+.gen-title {
+  @include font-size(18);
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,20 @@
+// Typography. Font size values are without "px" so that they can be used in the font size mixin
+$base-font-size: 18; //18px
+$line-height-general: 1.5;
+
+// Colors and backgrounds
+$grey-light: #f9f9f9;
+$grey-medium-1: #eee;
+$grey-medium-2: #b0b0b0;
+$grey-dark-1: #494949;
+$grey-dark-2: #999;
+$link-btn: #3a86ff;
+$link-btn-hover: #4361ee;
+$brand-first: $link-btn;
+$brand-second: #ff006e;
+
+// Grid
+$gutter-horizontal: 3rem;
+
+// Miscellaneous
+$outer-shadow-black: 0 0.1rem 0.8rem rgb(0 0 0 / 0.2);

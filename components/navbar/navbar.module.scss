@@ -1,0 +1,32 @@
+@use 'styles/abstracts/mixins' as *;
+@use 'styles/abstracts/variables' as *;
+
+.header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  &-auth {
+    box-shadow: $outer-shadow-black;
+  }
+
+  &-in {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  @include font-size(26);
+  font-weight: 800;
+  color: $brand-second;
+  text-decoration: none;
+
+  span {
+    color: $brand-first;
+  }
+}
+
+.search-field {
+  max-width: 600px;
+}

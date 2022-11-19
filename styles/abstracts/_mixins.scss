@@ -1,0 +1,36 @@
+// Fallback for rem font sizes
+@mixin font-size($sizeValue) {
+  $pxValue: $sizeValue;
+  $remValue: ($sizeValue/10);
+  font-size: #{$pxValue}px;
+  font-size: #{$remValue}rem;
+}
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Media query manager
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 40em) { @content }; //640px
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 81.25em) { @content }; //1300px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 120em) { @content }; //1920px
+  }
+
+  @if $breakpoint == 500 {
+    @media only screen and (max-width: 31.25em) { @content }; //500px
+  }
+}
